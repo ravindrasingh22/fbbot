@@ -21,7 +21,7 @@ app.get('/', function(req,res){
 // Facebook
 
 app.get('/webhook/', function(req,res){
-  if(req.query['hub.verify_token'] == "ravindrasinghpage"){
+  if(req.query['hub.verify_token'] == "tundriyalpagebot"){
     res.send(req.query['hub.challenge'])
   }
 })
