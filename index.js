@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const request = require("request")
 const app = express()
 
-let token = 'EAANQOPly8IgBACVjjtKGHWv01XVnPSbZCzXs673ZCdQwWZCyzB8fzu4Xt4kzfhYebz3eFiDteGtJrNrsZBRjaoouOXZAufudrZAQR38N7YOIFjk1MwtCKZCjthZBGkd90a7qMLp7KdVUqZAxvvf4BRxNYnioGDZCgphgdLkjClDYVjnAZDZD'
+// let token = 'EAANQOPly8IgBACVjjtKGHWv01XVnPSbZCzXs673ZCdQwWZCyzB8fzu4Xt4kzfhYebz3eFiDteGtJrNrsZBRjaoouOXZAufudrZAQR38N7YOIFjk1MwtCKZCjthZBGkd90a7qMLp7KdVUqZAxvvf4BRxNYnioGDZCgphgdLkjClDYVjnAZDZD'
 
 app.set("port", (process.env.PORT || 5000))
 
@@ -40,8 +40,7 @@ app.post('/webhook/', function(req,res){
    }
  }
  res.sendStatus(200)
-  }
-)
+})
 
 function sendText(sender,text){
   let messageData = {text: text}
