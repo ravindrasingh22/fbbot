@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const request = require("request")
 const app = express()
 
-let token = EAANQOPly8IgBACVjjtKGHWv01XVnPSbZCzXs673ZCdQwWZCyzB8fzu4Xt4kzfhYebz3eFiDteGtJrNrsZBRjaoouOXZAufudrZAQR38N7YOIFjk1MwtCKZCjthZBGkd90a7qMLp7KdVUqZAxvvf4BRxNYnioGDZCgphgdLkjClDYVjnAZDZD
+let token = 'EAANQOPly8IgBACVjjtKGHWv01XVnPSbZCzXs673ZCdQwWZCyzB8fzu4Xt4kzfhYebz3eFiDteGtJrNrsZBRjaoouOXZAufudrZAQR38N7YOIFjk1MwtCKZCjthZBGkd90a7qMLp7KdVUqZAxvvf4BRxNYnioGDZCgphgdLkjClDYVjnAZDZD'
 
 app.set("port", (process.env.PORT || 5000))
 
@@ -31,7 +31,7 @@ app.get('/webhook/', function(req,res){
 // Post
 app.post('/webhook/', function(req,res){
   let messaging_events = req.body.entry[0].messaging_events
-  for(let i=0, i < messaging_events.length; i++){
+  for(let i=0; i < messaging_events.length; i++){
     let event = req.body.entry[0].messaging[i]
    let sender = event.sender.id
    if (event.message && event.message.text) {
